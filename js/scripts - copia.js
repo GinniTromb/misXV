@@ -3,15 +3,11 @@
    Confetti (solo al cargar), globos flotantes, música
    ============================================================ */
  
-  
- 
- 
 document.addEventListener('DOMContentLoaded', () => {
  
   /* ── CONFETTI ──────────────────────────────────────────── */
   const canvas = document.getElementById('confetti-canvas');
-  if (!canvas) return; // si no existe, no ejecuta nada más del confetti
-const ctx = canvas.getContext('2d');
+  const ctx    = canvas.getContext('2d');
  
   canvas.width  = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -45,22 +41,6 @@ const ctx = canvas.getContext('2d');
       this.alpha  = 1;
     }
  
- let formLoaded = false;
-
-document.getElementById('google-form-iframe')
-  .addEventListener('load', () => {
-    if (!formLoaded) {
-      // Primera carga — no hacer nada, es la apertura inicial
-      formLoaded = true;
-      return;
-    }
-    // Segunda carga = el form fue enviado, Google recargó el iframe
-    setTimeout(() => {
-      document.getElementById('iframe-wrap').style.display = 'none';
-      document.getElementById('confirm-msg').style.display = 'block';
-    }, 500);
-  });
-  
     update() {
       this.x     += this.speedX;
       this.y     += this.speedY;
@@ -87,8 +67,6 @@ document.getElementById('google-form-iframe')
   }
  
   for (let i = 0; i < TOTAL; i++) pieces.push(new Piece());
-  
- 
  
   function animateConfetti() {
     if (!animActive) { ctx.clearRect(0, 0, canvas.width, canvas.height); return; }
