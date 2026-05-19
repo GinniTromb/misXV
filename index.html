@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>15 años de Gianna 🎉</title>
+  <link rel="stylesheet" href="css/styles.css" />
+ 
+  
+  <audio id="bg-music" loop preload="auto" controlsList="nodownload">
+    <source src="mp3/cancion.mp3" type="audio/mpeg" />
+  </audio>
+</head>
+ 
+<body>
+ 
+  <!-- Confetti canvas (se detiene solo) -->
+  <canvas id="confetti-canvas"></canvas>
+ 
+  <!-- Globos rojos flotando -->
+  <div class="balloons-container"></div>
+ 
+  <!-- ── TARJETA ─────────────────────────────────────────── -->
+  <div class="card-wrapper">
+    <div class="card">
+ 
+      <!-- BANNER SUPERIOR -->
+      <div class="card-banner">
+ 
+        <!-- Adorno dorado -->
+        <div class="banner-ornament">
+          <span class="ornament-line"></span>
+          <span class="ornament-diamond"></span>
+          <span class="ornament-diamond" style="width:5px;height:5px;opacity:.6;"></span>
+          <span class="ornament-diamond"></span>
+          <span class="ornament-line"></span>
+        </div>
+ 
+        <p class="banner-pre">Te invito a celebrar mis</p>
+        <div class="banner-fifteen">15</div>
+        <div class="banner-name">Gianna</div>
+ 
+        <!-- Adorno dorado inferior -->
+        <div class="banner-ornament" style="margin-top:14px;margin-bottom:0;">
+          <span class="ornament-line"></span>
+          <span class="ornament-diamond" style="width:5px;height:5px;opacity:.6;"></span>
+          <span class="ornament-diamond"></span>
+          <span class="ornament-diamond" style="width:5px;height:5px;opacity:.6;"></span>
+          <span class="ornament-line"></span>
+        </div>
+      </div>
+      <!-- /BANNER -->
+ 
+      <!-- CUERPO -->
+      <div class="card-body">
+ 
+        <!-- Grilla de datos del evento -->
+        <div class="info-grid">
+ 
+          <!-- Fecha -->
+          <div class="info-block" style="--delay:0.7s">
+            <span class="info-icon">📅</span>
+            <span class="info-label">Fecha</span>
+            <span class="info-value large">8 · 8 · 2026</span>
+          </div>
+ 
+          <!-- Hora -->
+          <div class="info-block" style="--delay:0.8s">
+            <span class="info-icon">🕘</span>
+            <span class="info-label">Hora</span>
+            <span class="info-value large">21:30 hs.</span>
+          </div>
+ 
+          <!-- Salón -->
+          <div class="info-block full" style="--delay:0.9s">
+            <span class="info-icon">✨</span>
+            <span class="info-label">Salón</span>
+            <span class="info-value" style="font-size:20px;">Fantasy Gold</span>
+          </div>
+ 
+          <!-- Dirección -->
+          <div class="info-block full" style="--delay:1.0s">
+            <span class="info-icon">📍</span>
+            <span class="info-label">Dirección</span>
+            <span class="info-value">Av. Forest 1422</span>
+          </div>
+ 
+        </div>
+        <!-- /info-grid -->
+ 
+        <!-- Separador -->
+        <div class="divider">
+          <span class="divider-line"></span>
+          <span class="divider-icon">💎</span>
+          <span class="divider-line"></span>
+        </div>
+ 
+        <!-- Dress Code -->
+        <div class="dress-code-block">
+          <p class="dress-code-title">Dress Code</p>
+          <p class="dress-code-value">Elegante Sport</p>
+          <div class="dress-code-icons">👗🕺👠</div>
+        </div>
+ 
+        <!-- Botones -->
+        <div class="buttons-row">
+ 
+          <!-- Música -->
+          <button id="btn-music" class="btn btn-music" type="button">
+            <span class="btn-icon">▶</span>
+            <span class="btn-label">Escuchar música</span>
+          </button>
+ 
+          <!-- Confirmación de asistencia (Google Form) -->
+          <a
+            href="asistencia.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-music"
+          
+            <span class="btn-icon">💌</span>
+            <span class="btn-label">Confirmar asistencia</span>
+          </a>
+           
+        </div>
+ 
+        <!-- Indicador de música reproduciéndose -->
+        <div class="music-indicator">
+          <div class="music-bars">
+            <div class="music-bar"></div>
+            <div class="music-bar"></div>
+            <div class="music-bar"></div>
+            <div class="music-bar"></div>
+          </div>
+          <span>Sonando ♪</span>
+        </div>
+ 
+      </div>
+      <!-- /card-body -->
+ 
+      <!-- PIE -->
+      <div class="card-footer">
+        <p class="footer-text">¡Te espero con mucho amor! 🎀</p>
+        <p class="footer-sub">Gianna &nbsp;·&nbsp; 08 · 08 · 2026</p>
+      </div>
+ 
+    </div>
+  </div>
+  <!-- /card-wrapper -->
+ 
+  <script src="js/scripts.js"></script>
+</body>
+</html>
+ 
