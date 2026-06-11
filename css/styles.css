@@ -13,6 +13,10 @@
   --gris-suave:  #F5F0F0;
   --texto-oscuro:#2A0A0A;
   --sombra:      rgba(192, 0, 28, 0.25);
+  --plateado:    #C0C0C0;
+  --plateado-claro:#C0C0C0;
+  --negro:#111111;
+
 }
  
 /* ===== RESET & BASE ===== */
@@ -29,7 +33,7 @@ html, body {
 }
  
 body {
-  background: var(--crema);
+  background: var(--negro);
   font-family: 'Montserrat', sans-serif;
   color: var(--texto-oscuro);
   position: relative;
@@ -200,12 +204,12 @@ body {
   flex: 1;
   max-width: 80px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+  background: linear-gradient(90deg, transparent, var(--plateado), transparent);
 }
  
 .ornament-diamond {
   width: 8px; height: 8px;
-  background: var(--dorado);
+  background: var(--plateado);
   transform: rotate(45deg);
   box-shadow: 0 0 6px rgba(212,175,55,0.6);
 }
@@ -225,7 +229,7 @@ body {
   font-family: 'Great Vibes', cursive;
   font-size: 72px;
   line-height: 1;
-  color: var(--dorado-claro);
+  color: var(--plateado-claro);
   text-shadow:
     0 2px 12px rgba(0,0,0,0.3),
     0 0 30px rgba(212,175,55,0.4);
@@ -322,7 +326,7 @@ body {
  
 .divider-icon {
   font-size: 16px;
-  color: var(--dorado);
+  color: var(--plateado);
 }
  
 /* ===== DRESS CODE ===== */
@@ -421,7 +425,7 @@ body {
  
 /* Botón RSVP */
 .btn-rsvp {
-  background: linear-gradient(135deg, var(--dorado), #B8900A);
+  background: linear-gradient(135deg, var(--plateado), #B8900A);
   color: var(--blanco);
   box-shadow: 0 4px 16px rgba(212,175,55,0.45);
 }
@@ -463,7 +467,7 @@ body {
 .sparkle {
   position: absolute;
   width: 6px; height: 6px;
-  background: var(--dorado-claro);
+  background: var(--plateado-claro);
   border-radius: 50%;
   animation: sparkleAnim 3s ease-in-out infinite;
   opacity: 0;
@@ -520,6 +524,40 @@ body {
 .music-bar:nth-child(2) { height: 10px; animation-delay: 0.1s; }
 .music-bar:nth-child(3) { height: 7px; animation-delay: 0.2s; }
 .music-bar:nth-child(4) { height: 12px; animation-delay: 0.05s; }
+
+
+    .mosaico {
+      width: 100%;
+      max-width: 680px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 360px 620px;
+      gap: 6px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+ 
+    .foto {
+      overflow: hidden;
+      position: relative;
+    }
+ 
+    .foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+ 
+    .foto:hover img {
+      transform: scale(1.04);
+    }
+ 
+    /* La foto grande ocupa las 2 columnas */
+    .foto-grande {
+      grid-column: 1 / 3;
+    }
  
 @keyframes barDance {
   from { transform: scaleY(0.3); }
