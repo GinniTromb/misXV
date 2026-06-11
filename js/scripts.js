@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
       animation-duration: ${dur}s;
       animation-delay: -${delay}s;
     `;
-    container.appendChild(el);
+ /*   container.appendChild(el);*/
   }
  
   for (let i = 0; i < BALLOON_COUNT; i++) createBalloon();
